@@ -275,7 +275,11 @@ img {
 }
 
 #product {
-    /* min-height: 610px; */
+    background: url('../images/bg-carousel/ba_bodyBG_1.png'),
+    url('../images/bg-carousel/ba_bodyBG_2.png'),
+    url('../images/bg-carousel/ba_bodyBG_3.png'),
+    url('../images/bg-carousel/ba_bodyBG_4.png'),
+    url('../images/bg-carousel/ba_bodyBG_5.png') !important;
 }
 
 #carouselExampleIndicators {
@@ -287,11 +291,7 @@ img {
 }
 
 .carousel-item {
-    background: url('../images/bg-carousel/ba_bodyBG_1.png'),
-    url('../images/bg-carousel/ba_bodyBG_2.png'),
-    url('../images/bg-carousel/ba_bodyBG_3.png'),
-    url('../images/bg-carousel/ba_bodyBG_4.png'),
-    url('../images/bg-carousel/ba_bodyBG_5.png') !important;
+    
 }
 
 .carousel-item > div {
