@@ -343,6 +343,7 @@ img {
     height: 312px;
     background-color: #fff;
     overflow: scroll;
+    overflow-x: hidden;
     font-family: var(--second-font);
     font-size: 13px;
 }
@@ -352,9 +353,21 @@ img {
     
 }
 
+.table-param tbody {
+    border-top: none !important;
+}
+
 .table-param th {
     display: table-cell;
     vertical-align: middle;
+}
+
+.table-param tr {
+    border-bottom: 1px solid #D8D9D9 !important;
+}
+
+.table-param .type {
+    background-color: rgb(231, 231, 230);
 }
 
 .circle {
