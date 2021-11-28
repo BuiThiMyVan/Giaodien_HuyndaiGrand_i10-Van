@@ -279,7 +279,17 @@ img {
     url('../images/bg-carousel/ba_bodyBG_2.png'),
     url('../images/bg-carousel/ba_bodyBG_3.png'),
     url('../images/bg-carousel/ba_bodyBG_4.png'),
-    url('../images/bg-carousel/ba_bodyBG_5.png') !important;
+    url('../images/bg-carousel/ba_bodyBG_5.png'),
+    url('../images/bg-carousel/grand_i10_bg.jpg'),
+    url('../images/bg-carousel/grand_i10_bga.jpg'),
+    url('../images/bg-carousel/i30_bodyBG_n1.png'),
+    url('../images/bg-carousel/i30_bodyBG_n2.png'),
+    url('../images/bg-carousel/i30_bodyBG_n3.png'),
+    url('../images/bg-carousel/i30_bodyBG_n4.png'),
+    url('../images/bg-carousel/i30_bodyBG_n5.png'),
+    url('../images/bg-carousel/i30_bodyBG_n6.png'),
+    url('../images/bg-carousel/i30_bodyBG_n7.png');
+    background-repeat: no-repeat;
 }
 
 #carouselExampleIndicators {
@@ -456,7 +466,7 @@ img {
 
 .slide-1 {
     /* width: 100%; */
-    padding-top: 140px;
+    padding-top: 86px;
 }
 
 .slide-info {
