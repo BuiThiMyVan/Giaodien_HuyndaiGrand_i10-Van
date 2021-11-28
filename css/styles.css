@@ -121,6 +121,10 @@ img {
     padding-right: 16px;
 }
 
+.pb16 {
+    padding-bottom: 16px;
+}
+
 .font-size-30 {
     font-size: 30px;
 }
@@ -327,6 +331,50 @@ img {
     width: 50px;
     height: 50px;
 }
+
+.carousel-item .rate-img {
+    width: 60px;
+    height: 25px;
+    border: 1px solid #ccc;
+}
+
+.carousel-item .param {
+    margin: 40px 0;
+    height: 312px;
+    background-color: #fff;
+    overflow: scroll;
+    font-family: var(--second-font);
+    font-size: 13px;
+}
+
+.available {
+    position: relative;
+    
+}
+
+.table-param th {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.circle {
+    position: absolute;
+    background: #000;
+    border: 0.1875em solid #0F1C3F;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.carousel-item .notice {
+    font-size: 12px;
+    font-weight: 700;
+    font-style: italic;
+}
+
 
 .top-menu {
     /* position: absolute;
