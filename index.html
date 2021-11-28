@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyundai Grand i10 - Giá xe grand i10 tốt nhất - Hyundai An Phú</title>
     <link href="#https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/ModernH-Bold.v1.0.css">
-    <link rel="stylesheet" href="./css/ModernH-EcoLight.v1.0.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="main">
@@ -116,26 +116,71 @@
                         UPDATING!
                       </div>                    
                   </div>
-                  <div class="carousel-item" style="height: 350px;">
-                    <div class="container">
-                        UPDATING!
+                  <div class="carousel-item">
+                      <div class="container">
+                          <div class="slide-content">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a href="#general-info" class="nav-link active" role="tab" data-bs-toggle="tab">Tổng quan</a></li>
+                                <li class="nav-item"><a href="#furniture-info" class="nav-link" role="tab" data-bs-toggle="tab">Nội thất</a></li>
+                                <li class="nav-item"><a href="#exterior-info" class="nav-link" role="tab" data-bs-toggle="tab">Ngoại thất</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="general-info">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/gallery_sum01.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/gallery_sum02.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-align-center mt16">1 of 1</div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="furniture-info">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/interior_driving-space_sum00.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/interior_driving-space_sum01.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/interior_driving-space_sum02.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/interior_driving-space_sum03.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-align-center mt16">1 of 1</div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="exterior-info">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/exterior_front_sum01.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/exterior_front_sum02.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/exterior_front_sum03.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/exterior_front_sum04.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/exterior_front_sum05.png" alt="">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 mt16">
+                                            <img src="./images/exterior_front_sum06.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-align-center mt16">1 of 1</div>
+                                </div>
+                            </div>
+                          </div>
+
                       </div>
-                    <!-- <ul class="nav nav-pills nav-list">
-                        <li class="nav-item active"><a class="nav-link-panel pl0" href="#slide_tong_quan" role="tab" data-toggle="tab">Chi tiết chiến dịch</a></li>
-                        <li class="nav-item"><a class="nav-link-panel" href="#slide_noi_that" role="tab" data-toggle="tab">Báo cáo</a></li>
-                        <li class="nav-item"><a class="nav-link-panel" href="#slide_ngoai_that" role="tab" data-toggle="tab">Báo cáo</a></li>
-                    </ul>
-                    <div class="tab-content panel-group" style="padding-top:15px;">
-                        <div role="tabpanel" class="panel b bl0 br0 tab-pane fade in active margin-top-32" id="slide_tong_quan">
-                            <span>abc</span>
-                        </div>
-                        <div role="tabpanel" class="panel b tab-pane fade margin-top-32" id="slide_noi_that">
-                            <span>123</span>
-                        </div>
-                        <div role="tabpanel" class="panel b tab-pane fade margin-top-32" id="slide_ngoai_that">
-                            <span>456</span>
-                        </div>
-                    </div> -->
+                        
                   </div>
                   <div class="carousel-item">
                     <div class="container">
@@ -815,13 +860,14 @@
                 </div>
             </div> -->
         </footer>
+        
         <!-- END FOOTER -->
     </div>
     
 </body>
 </html>
-<script src="./js/jquery-3.5.1.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+
+
 <script src="./js/bootstrap.js"></script>
 <script>
     function changeColorHover(e) {
