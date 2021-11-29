@@ -7,9 +7,19 @@
     <title>Hyundai Grand i10 - Giá xe grand i10 tốt nhất - Hyundai An Phú</title>
     <link href="#https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
+        integrity="sha512-UoT/Ca6+2kRekuB1IDZgwtDt0ZUfsweWmyNhMqhG4hpnf7sFnhrLrO0zHJr2vFp7eZEvJ3FN58dhVx+YMJMt2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"
+            integrity="sha512-EmZuy6vd0ns9wP+3l1hETKq/vNGELFRuLfazPnKKBbDpgZL0sZ7qyao5KgVbGJKOWlAFPNn6G9naB/8WnKN43Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- End Pannellum library -->
     <script src="./js/jquery-3.5.1.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/rotate.js"></script>
 </head>
 <body>
     <div id="main">
@@ -26,7 +36,7 @@
                 <li class="nav-menu-sp">
                     <a href="#">Sản phẩm</a>
                     <ul class="subnav display-none js-subnav-item">
-                        <li onmouseover="changeColorHover(event)" onmouseleave="changeColorLeave(event)"><a href="#">Xe du lịch</a></li>
+                        <li><a href="#">Xe du lịch</a></li>
                         <li><a href="#">Xe SUV</a></li>
                         <li><a href="#">Xe thương mại</a></li>
                         <li><a href="#">Limousine An Phú</a></li>
@@ -35,7 +45,7 @@
                 <li>
                     <a href="#">Tin tức</a>
                     <ul class="subnav display-none js-subnav-item">
-                        <li onmouseover="changeColorHover(event)" onmouseleave="changeColorLeave(event)"><a href="#">Tin khuyến mãi</a></li>
+                        <li><a href="#">Tin khuyến mãi</a></li>
                         <li><a href="#">Khuyến mãi 12</a></li>
                         <li><a href="#">Danh mục mới 123</a></li>
                         <li><a href="#">Danh mục mới 123</a></li>
@@ -51,7 +61,7 @@
                 <li>
                     <a href="#">Dịch vụ</a>
                     <ul class="subnav display-none js-subnav-item">
-                        <li onmouseover="changeColorHover(event)" onmouseleave="changeColorLeave(event)"><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
                         <li><a href="#">Hướng dẫn bảo hành</a></li>
                         <li><a href="#">Bảo dưỡng định kỳ</a></li>
                         <li><a href="#">Phụ tùng & phụ kiện</a></li>
@@ -60,14 +70,14 @@
                 <li>
                     <a href="#">Đăng ký lái thử</a>
                     <ul class="subnav display-none js-subnav-item">
-                        <li onmouseover="changeColorHover(event)" onmouseleave="changeColorLeave(event)"><a href="#">Đăng ký lái thử</a></li>
+                        <li><a href="#">Đăng ký lái thử</a></li>
                         <li><a href="#">Đặt lịch bảo dưỡng</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Mua xe</a>
                     <ul class="subnav display-none js-subnav-item">
-                        <li onmouseover="changeColorHover(event)" onmouseleave="changeColorLeave(event)"><a href="#">Bảng giá</a></li>
+                        <li><a href="#">Bảng giá</a></li>
                         <li><a href="#">Dự toán chi phí</a></li>
                         <li><a href="#">Hỗ trợ trả góp</a></li>
                         <li><a href="#">Hướng dẫn thủ tục</a></li>
@@ -85,6 +95,96 @@
         </header>
     
         <section id="product">
+            <div class="mb-menu-top display-none">
+                <div class="mb-menu-top-above">
+                    <div class="mb-daily-logo">
+                        <a href="#">
+                            <img src="./images/anphu-mobile-toplogo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mb-menu-toggle" onclick="openMbMenu(event)">
+                        <i class="ti-menu"></i>
+                    </div>
+                </div>
+                <div class="phone">028  36 36 82 95</div>
+                <ul class="mb-menu-content display-none" id="mb-menu">
+                    <li>
+                        <a href="#">Giới thiệu</a>
+                    </li>
+                    <li class="nav-menu-sp mb-menu-multi-level">
+                        <div class="mb-menu-level-root">
+                            <a href="#">Sản phẩm</a>
+                            <span onclick="openSubMenu(event)"><i class="fas fa-caret-down"></i></span>
+                        </div>                       
+                        <ul class="subnav js-subnav-item mb-subnav display-none">
+                            <li><a href="#">Xe du lịch</a></li>
+                            <li><a href="#">Xe SUV</a></li>
+                            <li><a href="#">Xe thương mại</a></li>
+                            <li><a href="#">Limousine An Phú</a></li>
+                        </ul>                       
+                    </li>
+                    <li class="nav-menu-sp mb-menu-multi-level">
+                        <div class="mb-menu-level-root">
+                            <a href="#">Tin tức</a>
+                            <span onclick="openSubMenu(event)"><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        
+                        <ul class="subnav display-none js-subnav-item">
+                            <li><a href="#">Tin khuyến mãi</a></li>
+                            <li><a href="#">Khuyến mãi 12</a></li>
+                            <li><a href="#">Danh mục mới 123</a></li>
+                            <li><a href="#">Danh mục mới 123</a></li>
+                            <li><a href="#">Danh mục mới 1256</a></li>
+                            <li><a href="#">Danh mục mới 123456</a></li>
+                            <li><a href="#">Tin tức chung</a></li>
+                            <li><a href="#">tintuc</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Hỏi đáp</a></li>                    
+                            <li><a href="#">Hỏi đáp</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu-sp mb-menu-multi-level">
+                        <div class="mb-menu-level-root">
+                            <a href="#">Dịch vụ</a>
+                            <span onclick="openSubMenu(event)"><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        
+                        <ul class="subnav display-none js-subnav-item">
+                            <li><a href="#">Chăm sóc khách hàng</a></li>
+                            <li><a href="#">Hướng dẫn bảo hành</a></li>
+                            <li><a href="#">Bảo dưỡng định kỳ</a></li>
+                            <li><a href="#">Phụ tùng & phụ kiện</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu-sp mb-menu-multi-level">
+                        <div class="mb-menu-level-root">
+                            <a href="#">Đăng ký lái thử</a>
+                        <span onclick="openSubMenu(event)"><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        
+                        <ul class="subnav display-none js-subnav-item">
+                            <li><a href="#">Đăng ký lái thử</a></li>
+                            <li><a href="#">Đặt lịch bảo dưỡng</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu-sp mb-menu-multi-level">
+                        <div class="mb-menu-level-root">
+                            <a href="#">Mua xe</a>
+                            <span onclick="openSubMenu(event)"><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        
+                        <ul class="subnav display-none js-subnav-item">
+                            <li><a href="#">Bảng giá</a></li>
+                            <li><a href="#">Dự toán chi phí</a></li>
+                            <li><a href="#">Hỗ trợ trả góp</a></li>
+                            <li><a href="#">Hướng dẫn thủ tục</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">                
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -112,8 +212,66 @@
                       </div> 
                   </div>
                   <div class="carousel-item">
-                      <div class="container">
-                        UPDATING!
+                      <div class="container slide-2">
+                          <div class="slide-2-head-text">
+                              <a href="#">Ngoại thất</a>
+                          </div>
+                        <ul class="nav flex-column img-360-btn-group">
+                            <li class="nav-item" id="name-color">
+                                <img src="./images/img-360/cover_color.png" alt="">
+                                <span>Cát</span>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" role="tab" data-bs-toggle="tab" data-text="Cát" onclick="getInfoCate(event)" href="#es-sand">
+                                  <img src="./images/img-360/cover_color.png" data-text="Cát" alt="">
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" role="tab" data-bs-toggle="tab" data-text="Trắng" onclick="getInfoCate(event)" href="#es-white">
+                                  <img src="./images/img-360/ex_Noble_White.png" data-text="Trắng" alt="">
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" role="tab" data-bs-toggle="tab" data-text="Đỏ" onclick="getInfoCate(event)" href="#es-red">
+                                  <img src="./images/img-360/ex_Ruby_wine.png" data-text="Đỏ" alt="">
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" role="tab" data-bs-toggle="tab" data-text="Bạc" onclick="getInfoCate(event)" href="#es-silver">
+                                    <img src="./images/img-360/ex_Sleek_Silver.png" data-text="Bạc" alt="">
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" role="tab" data-bs-toggle="tab" data-text="Xanh" onclick="getInfoCate(event)" href="#es-blue">
+                                    <img src="./images/img-360/ex_Night_Sky.png" data-text="Xanh" alt="">
+                                </a>
+                              </li>
+                          </ul>
+                          
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="es-sand">                                
+                                <!-- <div class="btn-start" onclick="getListImg(event)">
+                                    <img src="./images/btn_start.png" class="btn-start" alt="">
+                                </div> -->
+                                <!-- <img src="./images/ex_xeb/es_0.png" alt=""> -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="es-white">
+                                Updating
+                                
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="es-red">
+                                Updating
+                                
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="es-silver">
+                                
+                                Updating
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="es-blue">
+                                Updating
+                                
+                            </div>
+                        </div>
                       </div>                    
                   </div>
                   <div class="carousel-item">
@@ -127,10 +285,10 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="general-info">
                                     <div class="row">
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/gallery_sum01.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/gallery_sum02.png" alt="">
                                         </div>
                                     </div>
@@ -138,16 +296,16 @@
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="furniture-info">
                                     <div class="row">
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/interior_driving-space_sum00.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/interior_driving-space_sum01.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/interior_driving-space_sum02.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/interior_driving-space_sum03.png" alt="">
                                         </div>
                                     </div>
@@ -155,22 +313,22 @@
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="exterior-info">
                                     <div class="row">
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/exterior_front_sum01.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/exterior_front_sum02.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/exterior_front_sum03.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/exterior_front_sum04.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/exterior_front_sum05.png" alt="">
                                         </div>
-                                        <div class="col-md-3 col-xs-6 mt16">
+                                        <div class="col-md-3 col-6 mt16">
                                             <img src="./images/exterior_front_sum06.png" alt="">
                                         </div>
                                     </div>
@@ -185,37 +343,37 @@
                   <div class="carousel-item">
                     <div class="container">
                         <div class="row pb16">
-                            <div class="col-md-3 col-xs-6 mt16">
+                            <div class="col-md-3 col-12 mt16 rate-box">
                                 <div class="rate-title">Đánh giá xe grand - i10</div>
                                 <div class="rate-img">
                                     <img src="./images/new-county.png" alt="">
                                 </div>                               
                             </div>
-                            <div class="col-md-3 col-xs-6 mt16">
+                            <div class="col-md-3 col-12 mt16 rate-box">
                                 <div class="rate-title">Đánh giá xe (News)</div>
                                 <div class="rate-img">
                                     
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6 mt16">
+                            <div class="col-md-3 col-12 mt16 rate-box">
                                 <div class="rate-title">Đánh giá xe (News 1)</div>
                                 <div class="rate-img">
                                     
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6 mt16">
+                            <div class="col-md-3 col-12 mt16 rate-box">
                                 <div class="rate-title">Đánh giá xe (News 2)</div>
                                 <div class="rate-img">
                                     
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6 mt16">
+                            <div class="col-md-3 col-12 mt16 rate-box">
                                 <div class="rate-title">Đánh giá xe (News 3)</div>
                                 <div class="rate-img">
                                     
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6 mt16">
+                            <div class="col-md-3 col-12 mt16 rate-box">
                                 <div class="rate-title">đánh giá xe</div>
                                 <div class="rate-img">
                                     <img src="./images/es_0.png" alt="">
@@ -536,38 +694,38 @@
                 <div class="detail-text"> <a href="#">Grand i10</a> sở hữu kích thước lớn hàng đầu phân khúc, đem đến một không gian thỏa mái tối đa cũng như phong cách năng động cho chủ nhân. Bên cạnh đó, những công nghệ hàng đầu được trang bị  trên xe giúp cho trải nghiệm lái xe càng trở nên thú vị</div>
             </div>
             <div class="row mt50 hightlights-product">
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4 col-12">
                     <img src="./images/nb1.jpg" alt="">
                 </div>
-                <div class="col-md-4 col-xs-12 descript-product">
+                <div class="col-md-4 col-12 descript-product">
                     <span class="descript-product-head-text mb24">THIẾT KẾ ẤN TƯỢNG</span>
                     <p>
                         <a href="#">Grand i10 2017</a>
                         gây ấn tượng bởi vẻ ngoài mạnh mẽ, thể thao hơn với điểm nhấn là lưới tản nhiệt được thiết kế mới phong cách Thác nước cùng dải đèn LED chạy ban ngày Daytime Running Lights (DRL).
                     </p>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4 col-12">
                     <img src="./images/nb2.jpg" alt="">
                 </div>
-                <div class="col-md-12 col-xs-12 mt24">
+                <div class="col-md-12 col-12 mt24">
                     <img src="./images/nb3.png" alt="">
                 </div>
-                <div class="col-md-12 col-xs-12 mt24 descript-box">
+                <div class="col-md-12 col-12 mt24 descript-box">
                     <span class="descript-text-1">Phong cách thể thao với lưới tản nhiệt được thiết kế mới theo phong cách “Thác nước”</span>
                     <img src="./images/nb4.jpg" alt="">
                 </div>
-                <div class="col-md-12 col-xs-12 mt24 descript-box">
+                <div class="col-md-12 col-12 mt24 descript-box">
                     <span class="descript-text-2">Phong cách thể thao không thể nhầm lẫn</span>
                     <img src="./images/nb5.jpg" alt="">
                 </div>
-                <div class="col-md-6 col-xs-6 m0 mt24 pl16 pr16">
+                <div class="col-md-6 col-6 m0 mt24 pl16 pr16">
                     <img src="./images/nb6.jpg" alt="">
                     <div class="descript-text-box">
                         <div class="descript-header mb24">Không gian chứa đồ rộng rãi</div>
                         <p><a href="#">Grand i10</a> sở hữu không gian chứa đồ lớn nhất phân khúc, giúp bạn chở được tối đa số hành lí cho những chuyến đi cùng với cả gia đình.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-6 m0 mt24 pl16 pr16">
+                <div class="col-md-6 col-6 m0 mt24 pl16 pr16">
                     <img src="./images/nb7.jpg" alt="">
                     <div class="descript-text-box">
                         <div class="descript-header mb24">An toàn tối đa</div>
@@ -591,7 +749,7 @@
                     <img src="./images/ngoaithat1.png" alt="">
                 </div>
                 <div class="row product-function">
-                    <div class="col-md-6 col-xs-6 product-detail-item mb16">
+                    <div class="col-md-6 col-6 product-detail-item mb16">
                         <img src="./images/nt-nb2.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -602,7 +760,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item mb16">
+                    <div class="col-md-6 col-6 product-detail-item mb16">
                         <img src="./images/nt-nb3.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -613,7 +771,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item mb16 mt16">
+                    <div class="col-md-6 col-6 product-detail-item mb16 mt16">
                         <img src="./images/nt-nb4.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -634,7 +792,7 @@
                     <img src="./images/ngoaithat2.png" alt="">
                 </div>
                 <div class="row product-function">
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/nt-nb5.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -645,7 +803,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/nt-nb6.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -656,7 +814,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/nt-nb7.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -677,7 +835,7 @@
                     <img src="./images/ngoaithat3.png" alt="">
                 </div>
                 <div class="row product-function">
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/nt-nb8.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -688,7 +846,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/nt-nb9.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -699,7 +857,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/nt-nb10.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -712,42 +870,42 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/nt-nb15.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Đèn sương mù</span>
                             <p>Đèn sương mù của Grand i10 được đặt thấp ở phần cản trước, giúp tăng đảm bảo ánh sáng trong điều kiện vận hành có sương mù.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/nt-nb16.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Hốc hút gió trước</span>
                             <p>Hốc hút gió phía trước nhằm giảm đáng kể sức cản của gió đồng thời giảm nhiệt la-zăng, lốp, giúp tăng cường khả năng vận hành ổn định và an toàn.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/nt-nb17.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Tay nắm cửa mạ Crom</span>
                             <p>Tay nắm cửa mạ Crom trên Grand i10 tạo nên vẻ lịch lãm, sang trọng cho chiếc xe.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/nt-nb18.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Tấm phản quang phía sau</span>
                             <p>Tấm phản quang đuôi xe được thiết kế mới, kết hợp cùng cản sau màu đen tạo nên vẻ nổi bật và mạnh mẽ cho Grand i10</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/nt-nb19.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Gạt mưa kính sau</span>
                             <p><a href="#">Grand i10</a> được trang bị gạt mưa ở kính sau, giúp làm sạch tấm kính tăng khả năng quan sát của lái xe.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/nt-nb20.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Đèn phanh trên cao</span>
@@ -776,7 +934,7 @@
                         giúp đáp ứng những đòi hỏi khắt khe nhất của chủ sở hữu.</p>
                 </div>
                 <div class="row product-function mt24">
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/noi3.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -787,7 +945,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/noi4.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -798,7 +956,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/noi5.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -811,21 +969,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/noi6.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Túi tài liệu sau ghế</span>
                             <p>Túi tài liệu được thiết kế liền mạch tại mặt lưng ghế hàng ghế trước, giúp bạn có thể để những cuốn sách và tạp chí yêu thích.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/noi7.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Ghế điều chỉnh độ cao</span>
                             <p>Hệ thống bơm hơi trên xe có cơ cấu đơn giản và hiệu quả giúp ghế người lái có thể điều chỉnh độ cao để giúp đạt tới vị trí như mong muốn.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/noi8.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Giá để cốc trung tâm</span>
@@ -866,21 +1024,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/v4.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Hộp số sàn</span>
                             <p>Gồm 5 cấp số với các bước chuyển số được tinh chỉnh làm tăng khả năng phản ứng và sự nhạy bén khi di chuyển, đồng thời giúp tiết kiệm nhiên liệu tối đa.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/v5.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Hộp số tự động</span>
                             <p>Gồm 4 cấp số đảm bảo sự kết hợp hoàn hảo giữa tính năng vận hành mạnh mẽ, tiết kiệm nhiên liệu cùng sự bền bỉ bằng các công nghệ tiên tiến nhất như van điện từ và bộ chuyển đổi momen xoắn phẳng.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/v6.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Đồng hồ hiển thị cấp số</span>
@@ -920,21 +1078,21 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/an4.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Cửa sổ điều chỉnh điện</span>
                             <p>Bộ điều khiển điện cửa sổ được đặt bên ghế lái giúp bạn dễ đàng điều khiển cửa sổ cũng như đóng mở cửa ra vào.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/an5.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Sấy kính sau</span>
                             <p>Grand i10 sở hữu kính sau tích hợp chức năng sấy điện, giúp đảm bảo tầm nhìn phía sau cho người lái trong điều kiện trời sương mù hoặc có mưa.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/an6.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Cửa sổ an toàn chống kẹt</span>
@@ -957,7 +1115,7 @@
                     <div class="detail-text mb16">Những chuyến hành trình của bạn sẽ trở nên thú vị hơn với những công nghệ tiện ích được trang bị bên trong <a href="">Grand i10</a></div>
                 </div>
                 <div class="row product-function">
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/tien2.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header text-black">
@@ -968,7 +1126,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 product-detail-item">
+                    <div class="col-md-6 col-6 product-detail-item">
                         <img src="./images/tien3.jpg" class="product-function-img" alt="">
                         <div class="product-function-descript">
                             <div class="product-function-descript-header">
@@ -981,28 +1139,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/tien4.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Chìa khóa thông minh & Khởi động nút bấm</span>
                             <p>Chìa khóa thông minh giúp chủ xe có thể dễ dàng vào trong xe với chỉ một nút bấm trên tay nắm cửa. Nút khởi động Start/Stop Engine giúp việc khởi động hoặt tắt máy đơn giản hơn bao giờ hết với chỉ 1 nút bấm.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/tien5.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Khay để đồ phía sau</span>
                             <p>Khay để đồ phía sau giúp bạn thuận tiện để vật dụng cá nhân</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/tien6.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Đèn chiếu sáng cốp</span>
                             <p>Cốp xe Grand i10 được trang bị đèn chiếu sáng, giúp bạn dễ dàng lấy hoặc sắp đặt hành lí trong điều kiện ánh sáng không tốt hoặc vào ban đêm.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 detail-product">
+                    <div class="col-md-4 col-12 detail-product">
                         <img src="./images/tien7.jpg" alt="">
                         <div class="detail-box-text">
                             <span>Vô lăng chỉnh hướng</span>
@@ -1026,7 +1184,7 @@
             <div class="content">
                 <div class="container">
                     <div class="row content-wrap">
-                        <div class="col-md-3 col-xs-12 content-item">
+                        <div class="col-md-3 col-12 content-item">
                             <img src="./images/daily-logo-footer.png" alt="">
                             <p class="content-item-text">Hyundai An Phú - Đại lý ủy quyền chính thức của Hyundai Thành Công là địa điểm trưng bày các dòng xe mới nhất của Hyundai.</p>
                             <p class="content-item-text">Tọa lạc tại trung tâm Thành Phố Hồ Chí Minh với các Showroom chuẩn 1S, 2S hiện đại, cùng đội ngũ chuyên viên tư vấn giàu kinh nghiệm.
@@ -1034,7 +1192,7 @@
                             <p class="content-item-text">Hyundai An Phú mang sứ mệnh phục vụ khách hàng trên Toàn quốc, giúp khách hàng có những trải nghiệm ấn tượng về sản phẩm - dịch vụ cao cấp của chúng tôi.</p>
                             <p class="content-item-text">Liên hệ ngay để được tư vấn và nhận các chương trình ưu đãi hấp dẫn</p>
                         </div>
-                        <div class="col-md-3 col-xs-12 content-item">
+                        <div class="col-md-3 col-12 content-item">
                             <div class="content-item-title">
                                 HÌNH ẢNH
                             </div>
@@ -1042,46 +1200,46 @@
                                 <img src="./images/181218_Gioi-thieu-showroom.jpg" alt="">
                             </div>
                         </div>
-                        <div class="col-md-3 col-xs-12 content-item">
+                        <div class="col-md-3 col-12 content-item">
                             <div class="content-item-title">
                                 BÀI VIẾT GẦN ĐÂY
                             </div>
                             <div class="row content-item-post">
-                                <div class="col-md-4 col-xs-3 post-img">
+                                <div class="col-md-4 col-3 post-img">
                                     <img src="./images/bv1.jpg" alt="">
                                 </div>                       
                                 
-                                <div class="col-md-8 col-xs-9 post-link">
+                                <div class="col-md-8 col-9 post-link">
                                     <span>🚘 CHƯƠNG TRÌNH GIA HẠN BẢO HÀNH “H...</span>
                                     <span class="post-date">17/04/2020</span>
                                 </div>                                
                             </div>
                             <div class="row content-item-post">
-                                <div class="col-md-4 col-xs-3 post-img">
+                                <div class="col-md-4 col-3 post-img">
                                     <img src="./images/bv2.jpg" alt="">
                                 </div>                               
-                                <div class="col-md-8 col-xs-9 post-link">
+                                <div class="col-md-8 col-9 post-link">
                                     <span>🔥 KHỞI SẮC ROADSHOW THÁNG 06 TẠI H...</span>
                                     <span class="post-date">13/06/2020</span>
                                 </div>                                
                             </div>
                             <div class="row content-item-post">
-                                <div class="col-md-4 col-xs-3 post-img">
+                                <div class="col-md-4 col-3 post-img">
                                     <img src="./images/bv3.jpg" alt="">
                                 </div>                               
-                                <div class="col-md-8 col-xs-9 post-link">
+                                <div class="col-md-8 col-9 post-link">
                                     <span>🏆 ĐÓN XE SANG CÙNG HYUNDAI AN PHÚ ...</span>
                                     <span class="post-date">12/06/2020</span>
                                 </div>                               
                             </div>
                         </div>
-                        <div class="col-md-3 col-xs-12 content-item">
+                        <div class="col-md-3 col-12 content-item">
                             <div class="content-item-title">
                                 FACEBOOK
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-xs-12 contact-info">
+                        <div class="col-md-4 col-12 contact-info">
                             <div class="icon-info">
                                 <img src="./images/icon-market.svg" alt="">
                             </div>
@@ -1089,7 +1247,7 @@
                                 Showroom 2S: 1052 Nguyễn Văn Linh, P.Tân Phong, Quận 7, TP.HCM
                             </div>
                         </div>
-                        <div class="col-md-4 col-xs-12 contact-info">
+                        <div class="col-md-4 col-12 contact-info">
                             <div class="icon-info">
                                 <img src="./images/icon-market.svg" alt="">
                             </div>
@@ -1097,7 +1255,7 @@
                                 Showroom 2S: 1052 Nguyễn Văn Linh, P.Tân Phong, Quận 7, TP.HCM
                             </div>
                         </div>
-                        <div class="col-md-4 col-xs-12 contact-info">
+                        <div class="col-md-4 col-12 contact-info">
                             <div class="icon-info">
                                 <img src="./images/icon-contact.svg" alt="">
                             </div>
@@ -1111,25 +1269,59 @@
             <div class="copy-right">
                 Copyright ©idocNet 2018
             </div>
-            <!-- <div class="menu-bottom">
+            <div class="menu-bottom display-none">
                 <div class="menu-bottom-left">
                     <div class="social-platform">
                         <div class="platform"><img src="./images/youtube.svg" alt=""></div>
                         <div class="platform"><img src="./images/facebook.svg" alt=""></div>
                     </div>
                     <div class="hotline">
-    
+                        <div class="phone-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="phone-circle2"></div>
+                        <div class="phone-number">1900 988 978</div>
                     </div>
                 </div>
                 <div class="menu-bottom-right">
                     <div class="register">
-    
+                        <div class="regis register-drive">
+                            <a class="btn-register" href="">Đăng ký lái thử</a>
+                        </div>
+                        <div class="regis book-btn">
+                            <a class="btn-register" href="#">Đặt lịch bảo dưỡng</a>
+                        </div>
                     </div>
-                    <div class="chat-box">
-    
+                    <div class="top-up-link" id="back-to-top">
+                        <a class="btn-top-up">                        
+                            <span class="text">Về đầu trang</span>
+                            <div class="line-link"></div>   
+                            <div class="arrow-link">
+                                <i class="fas fa-arrow-alt-circle-up"></i>
+                            </div>                                         
+                        </a>
+                    </div>
+                    
+                    <div id="chat-box" class="chat-box">
+                        <div class="chat-box-header" onclick="closeChatBox()">
+                            <span class="chat-box-message">Chat với chúng tôi</span>
+                            <div class="chat-box-icon-close"><i class="fas fa-minus"></i></div>
+                        </div>
+                        <div class="chat-box-header chat-box-header-close" onclick="openChatBox()">
+                            <div class="chat-box-img"><img src="./images/lcwg.png" alt=""></div>
+                            <span class="chat-box-message">Chat với chúng tôi</span>           
+                        </div>
+                        <div class="chat-box-body display-none">
+                            <input type="text" class="chat-text" placeholder="Mời bạn nhập Tên"></input>
+                            <input type="text" class="chat-text" placeholder="Mời bạn nhập Email"></input>
+                            <input type="text" class="chat-text" placeholder="Mời bạn nhập số điện thoại"></input>
+                            <textarea name="" id="" class="chat-text question-input" cols="1" rows="2"></textarea>
+                            <div class="line"></div>
+                            <button class="btn-send-message">Gửi tin nhắn</button>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </footer>
         
         <!-- END FOOTER -->
@@ -1140,6 +1332,22 @@
 
 
 <script src="./js/bootstrap.js"></script>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            document.getElementById("back-to-top").style.display = "block";
+        } else {
+            document.getElementById("back-to-top").style.display = "none";
+        }
+    }
+    
+    document.getElementById('back-to-top').addEventListener("click", function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
 <script>
     function changeColorHover(e) {
         e.target.parentNode.style.setProperty("--submenu-color", "#dc7b5b");
@@ -1157,7 +1365,6 @@
         
         for (var item of btn_carousel) {
             new_src = item.childNodes[1].childNodes[1].getAttribute('src').replace('-active', '');
-            // console.log(typeof new_src);
             item.childNodes[1].childNodes[1].setAttribute('src', new_src);
         }
         new_src = btn_current.substring(0, pos) + '-active' + btn_current.substring(pos);
@@ -1165,17 +1372,55 @@
         
     }
 
-    // $(window).scroll(function() {
-    //     var hT = $('#top-menu').offset().top,
-    //         hH = $('#top-menu').outerHeight(),
-    //         wH = $(window).height(),
-    //         wS = $(this).scrollTop();
-    //     if (wS > (hT+hH-wH)){
-    //         $('#top-menu').addClass('top-menu-fixed');
-    //     } else {
-    //         $('#top-menu').removeClass('top-menu-fixed');
-    //     }
-    // });
+    function getInfoCate(e) {
+        console.log([e.target]);
+        var name_color = e.target.getAttribute('data-text');
+        var link_img_color = e.target.getAttribute('src');
+        var box_name = document.getElementById('name-color');
+        box_name.childNodes[1].setAttribute('src', link_img_color);
+        box_name.childNodes[3].innerText = name_color;
+    }
+
+    function openSubMenu(e) {
+        var element = e.target.parentNode.parentNode.parentNode.childNodes[3];
+        if(element.classList.contains('display-none')){
+            element.classList.remove('display-none');
+        } else {
+            element.classList.add('display-none');
+        }
+    }
+
+    function openMbMenu() {
+        var element = document.getElementById('mb-menu');
+        if(element.classList.contains('display-none')) {
+            element.classList.remove('display-none');
+        } else {
+            element.classList.add('display-none');
+        }
+    }
+
+    function openChatBox() {
+        var chatBox = document.getElementById('chat-box');
+        var chatBoxHeader = document.querySelector('.chat-box-header');
+        var chatBoxHeaderClose = document.querySelector('.chat-box-header-close');
+        var chatBoxBody = document.querySelector('.chat-box-body');
+        chatBox.style.width = "300px";
+        chatBoxHeader.style.display = "flex";
+        chatBoxHeaderClose.style.display = "none";
+        chatBoxBody.classList.remove('display-none');
+    }
+
+    function closeChatBox() {
+        var chatBox = document.getElementById('chat-box');
+        var chatBoxHeader = document.querySelector('.chat-box-header');
+        var chatBoxHeaderClose = document.querySelector('.chat-box-header-close');
+        var chatBoxBody = document.querySelector('.chat-box-body');
+        chatBox.style.width = "158px";
+        chatBoxHeader.style.display = "none";
+        chatBoxHeaderClose.style.display = "flex";
+        chatBoxBody.classList.add('display-none');
+    }
+
 
     $(document).ready(function() {
         $(".nav-top-link").click(function () {
@@ -1183,12 +1428,13 @@
             // $(".tab").addClass("active"); // instead of this do the below 
             $(this).addClass("on");   
         });
-})
 
-//     btn-cover
-// btn-360
-// btn-gallery
-// btn-review
-// btn-spec
-// btn-catalog
+        $('#es-sand').rotate3d({
+            'source': 'images/ex_xeb/es_',
+            'ext' :'.png',
+            'count' : 35,
+        });
+
+    
+})
 </script>
