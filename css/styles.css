@@ -299,7 +299,7 @@ img {
 }
 
 #carouselExampleIndicators {
-    min-height: 644px;
+    min-height: 616px;
 }
 
 #carouselExampleIndicators .carousel-indicators {
@@ -406,7 +406,7 @@ img {
 
 .top-menu {
     position: absolute;
-    left: 11%;
+    left: 15%;
     bottom: 0;
     width: 970px;
     margin: 0 auto;
@@ -415,7 +415,7 @@ img {
 .top-menu-fixed {
     position: fixed;
     top: 0;
-    left: 11%;
+    left: 15%;
     max-width: 970px;
     max-height: 176px;
     padding: 0 15px;
@@ -1059,7 +1059,7 @@ img {
     justify-content: space-between;
 }
 
-.menu-bottom .regis {
+.menu-bottom-right .regis {
     background: #ff4d4d;
     border: 1px solid #ff4d4d;
     border-radius: 20px 0 0 20px;
@@ -1071,17 +1071,17 @@ img {
     margin-bottom: 16px;
 }
 
-.menu-bottom .regis a {
+.menu-bottom-right .regis a {
     color: #fff;
     font-size: 15px;
     font-family: var(--third-font);
 }
 
-.menu-bottom .regis a:hover {
+.menu-bottom-right .regis a:hover {
     color: #000;
 }
 
-.menu-bottom .top-up-link {
+.menu-bottom-right .top-up-link {
     width: 80px;
     height: 80px;
     display: flex;
@@ -1096,11 +1096,11 @@ img {
     margin-left: -32px;
 }
 
-.menu-bottom .top-up-link:hover {
+.menu-bottom-right .top-up-link:hover {
     cursor: pointer;
 }
 
-.menu-bottom .btn-top-up {
+.menu-bottom-right .btn-top-up {
     margin-top: 5px;
     font-size: 9px;
     display: flex;
@@ -1109,7 +1109,7 @@ img {
     align-items: center;
 }
 
-.menu-bottom .btn-top-up .text {
+.menu-bottom-right .btn-top-up .text {
     color: #fff;
     text-transform: uppercase;
 }
@@ -1138,6 +1138,7 @@ img {
     border-radius: 25px;
     width: 54px;
     height: 95px;
+    margin-bottom: 164px;
 }
 
 .social-platform .platform {
@@ -1148,6 +1149,18 @@ img {
 .social-platform .platform:hover {
     zoom: 1.5;
     cursor: pointer;
+}
+
+.menu-bottom-left {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.menu-bottom-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
 .menu-bottom-left .hotline {
@@ -1467,7 +1480,9 @@ img {
     #exterior .exterior-bg,
     #safe .safe-bg,
     .operation-bg,
-    .convenient-bg {
+    .convenient-bg,
+    .menu-bottom-left,
+    .menu-bottom-right {
         display: none;
     }
 
@@ -1554,10 +1569,6 @@ img {
 
     .copy-right {
         padding: 16px 0;
-    }
-
-    .menu-bottom {
-        display: none;
     }
 
 }
