@@ -424,7 +424,7 @@ img {
     z-index: 2;
 }
 
-.top-menu .top-menu_logo {
+.top-menu_logo {
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
 }
