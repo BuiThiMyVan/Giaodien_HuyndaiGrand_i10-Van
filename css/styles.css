@@ -322,6 +322,7 @@ img {
     background-color: transparent !important;
     opacity: 1 !important;
     text-indent: 0 !important;
+    font-family: var(--third-font);
 }
 
 .btn-carousel .slide-icon {
@@ -407,7 +408,6 @@ img {
 .top-menu {
     position: absolute;
     left: 15%;
-    bottom: 0;
     width: 970px;
     margin: 0 auto;
 }
@@ -422,6 +422,13 @@ img {
     background-color: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
     z-index: 2;
+}
+
+.top-menu a,
+.top-menu-fixed a {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: var(--third-font);
 }
 
 .top-menu_logo {
@@ -1335,6 +1342,44 @@ img {
     margin: 5px 0;
 }
 
+.modal-dialog {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+}
+
+.modal-dialog .modal-content {
+    position: relative;
+    padding: 10px;
+    height: auto;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: -16px;
+    right: -13px;
+    padding: 4px;
+    font-size: 22px;
+    color: white;
+    border: 2px solid #fff;
+    background-color: #000;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+}
+
+.modal-content .close:hover,
+.tab-content img:hover {
+    cursor: pointer;
+} 
+
 @media (max-width: 739px) {
     html,body{
         overflow-x: hidden;
@@ -1439,7 +1484,6 @@ img {
 
     .top-menu {
         left: 0;
-        bottom: 0;
         width: 100%;
         margin: 0 auto;
     }
@@ -1574,6 +1618,10 @@ img {
 
     .product-function-descript {
         display: none !important;
+    }
+
+    .slide-2 {
+        padding-right: 80px;
     }
 
 }
