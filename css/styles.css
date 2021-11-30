@@ -421,6 +421,7 @@ img {
     padding: 0 15px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+    z-index: 2;
 }
 
 .top-menu .top-menu_logo {
