@@ -1042,23 +1042,6 @@ img {
     color: #fff;
 }
 
-.top-menu {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.top-menu-fixed {
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 176px;
-    padding: 0 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
-}
-
 .navbar-top .nav-top {
     display: flex;
     justify-content: space-between;
@@ -1443,6 +1426,23 @@ img {
         margin-right: 0 !important;
         padding: 0 15px;
         justify-content: space-around;
+    }
+
+    .top-menu {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .top-menu-fixed {
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 176px;
+        padding: 0 15px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
     }
 
     .carousel-item .slide-1 {
