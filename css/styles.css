@@ -393,6 +393,10 @@ img {
     transform: translate(-50%,-50%);
 }
 
+/* .carousel {
+    position: static !important;
+} */
+
 .carousel-item .notice {
     font-size: 12px;
     font-weight: 700;
@@ -401,21 +405,25 @@ img {
 
 
 .top-menu {
-    /* position: absolute;
-    right: 0;
+    position: absolute;
+    left: 11%;
     bottom: 0;
-    z-index: 2; */
+    width: 970px;
+    margin: 0 auto;
 }
 
 .top-menu-fixed {
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 11%;
+    max-width: 970px;
+    max-height: 176px;
+    padding: 0 15px;
     background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
 }
 
 .top-menu .top-menu_logo {
-    margin-left: 15%;
-    margin-right: 15%;
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
 }
@@ -425,10 +433,10 @@ img {
     height: 24px;
 }
 
-.navbar-top {
+/* .navbar-top {
     margin-left: 15%;
     margin-right: 15%;
-}
+} */
 
 .navbar-top .nav-top {
     display: flex;
@@ -1034,6 +1042,28 @@ img {
     color: #fff;
 }
 
+.top-menu {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top-menu-fixed {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 176px;
+    padding: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+}
+
+.navbar-top .nav-top {
+    display: flex;
+    justify-content: space-between;
+}
+
 .menu-bottom {
     position: fixed;
     bottom: 0;
@@ -1049,7 +1079,7 @@ img {
 .menu-bottom .regis {
     background: #ff4d4d;
     border: 1px solid #ff4d4d;
-    border-radius: 4px 0 0 4px;
+    border-radius: 20px 0 0 20px;
     width: 200px;
     height: 40px;
     display: flex;
@@ -1078,7 +1108,8 @@ img {
     opacity: 0.8;
     border: 1px solid transparent;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     margin-left: -32px;
 }
 
@@ -1407,9 +1438,10 @@ img {
         
     }
 
-    .carousel-indicators {
-        margin-left: 0;
-        margin-right: 0;
+    #top-menu .carousel-indicators {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 15px;
         justify-content: space-around;
     }
 

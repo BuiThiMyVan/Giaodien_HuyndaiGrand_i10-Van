@@ -627,8 +627,8 @@
                       </div>
                   </div>
                 </div>
-                <div class="top-menu" id="top-menu">
-                    <div class="carousel-indicators">
+                <div class="top-menu" id="top-menu" data-spy="affix">
+                    <div class="carousel-indicators m0">
                         <a type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="btn-carousel btn-cover active" aria-current="true" aria-label="Slide 1" onclick="activeBtn(event)">
                             <div class="slide-icon">
                                 <img src="./images/affix-cover-active.png" alt="">
@@ -1337,9 +1337,9 @@
 
     function scrollFunction() {
         if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-            document.getElementById("back-to-top").style.display = "block";
+            document.getElementById("back-to-top").style.visibility = "visible";
         } else {
-            document.getElementById("back-to-top").style.display = "none";
+            document.getElementById("back-to-top").style.visibility = "hidden";
         }
     }
     
@@ -1421,7 +1421,20 @@
         chatBoxBody.classList.add('display-none');
     }
 
-
+    $(window).scroll(function(){
+        // debugger
+        var heightwin = $(this).scrollTop();
+        var heightelement = $('#top-menu').offset().top;
+        if(heightwin >= heightelement) {
+            $("#top-menu").addClass("top-menu-fixed");
+            $("#top-menu").removeClass("top-menu");
+        }
+        if($(this).scrollTop() <= $('#product').scrollTop() + $("#product").height()) {
+            // debugger
+            $("#top-menu").removeClass("top-menu-fixed");
+            $("#top-menu").addClass("top-menu");
+        }
+    });
     $(document).ready(function() {
         $(".nav-top-link").click(function () {
             $(".nav-top-link").removeClass("on");
@@ -1435,6 +1448,6 @@
             'count' : 35,
         });
 
-    
-})
+        
+    });
 </script>
