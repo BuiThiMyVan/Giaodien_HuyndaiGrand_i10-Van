@@ -15,6 +15,16 @@
     src: url(./ModernH-Bold.v1.0.css);
 }
 
+@font-face {
+    font-family: ModernHLight;
+    src: url(../font/modernh-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: ModernHBold;
+    src: url(../font/modernh-bold-webfont.ttf);
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -26,11 +36,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #3c599b;
+    color: #337ab7;
 }
 
 a:hover {
-    color: #3c599b;
+    color: #337ab7;
     opacity: 0.8;
 }
 
@@ -46,9 +56,11 @@ img {
 :root {
     --main-color: #0E528B;
     --main-font: 'Chakra Petch', sans-serif;
-    --second-font: ModernHEcoLight;
-    --third-font: ModernHEcoBold;
+    --second-font: ModernHLight;
+    --third-font: ModernHBold;
     --submenu-color: #fff;
+    --modern-eco-light: ModernHEcoLight;
+    --modern-eco-bold: ModernHEcoBold;
 }
 
 /* Common */
@@ -318,11 +330,12 @@ img {
     height: 70px !important;
     margin-right: 12px !important;
     margin-left: 12px !important;
-    color: var(--main-color) !important;
+    color: #337ab7 !important;
     background-color: transparent !important;
     opacity: 1 !important;
     text-indent: 0 !important;
     font-family: var(--third-font);
+    font-weight: bold;
 }
 
 .btn-carousel .slide-icon {
@@ -407,7 +420,8 @@ img {
 
 .top-menu {
     position: absolute;
-    left: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 970px;
     margin: 0 auto;
 }
@@ -415,9 +429,10 @@ img {
 .top-menu-fixed {
     position: fixed;
     top: 0;
-    left: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 970px;
-    max-height: 176px;
+    max-height: 222px;
     padding: 0 15px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
@@ -434,6 +449,7 @@ img {
 .top-menu_logo {
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
+    margin-top: 24px;
 }
 
 .top-menu_logo .top-menu_logo-box {
@@ -448,6 +464,7 @@ img {
 
 .navbar-top .nav-top {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar-top .nav-top li {
@@ -703,16 +720,16 @@ img {
     display: inline-block;
     padding: 10px 0;
     color: #000;  
-    font-family: var(--second-font);
+    font-family: var(--third-font);
     font-weight: bold;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .detail-product .detail-box-text p {
-    color: #333;
-    font-weight: bold;
-    font-family: var(--third-font);
-    font-size: 15px;
+    color: #656565;
+    font-weight: 700;
+    font-family: var(--modern-eco-light);
+    font-size: 16px;
 }
 
 /* NOI THAT */
@@ -987,6 +1004,11 @@ img {
 #footer > .content {
     border-bottom: 1px solid #fff;
     padding-bottom: 45px;
+}
+
+.content .content-container {
+    max-width: 100%;
+    width: 90%;
 }
 
 .content .content-wrap {
@@ -1378,250 +1400,9 @@ img {
 .modal-content .close:hover,
 .tab-content img:hover {
     cursor: pointer;
-} 
+}
 
-@media (max-width: 739px) {
-    html,body{
-        overflow-x: hidden;
-    }
-    .mb-menu-top {
-        display: block;
-        padding-bottom: 0;
-        border-bottom: 1px solid #e4e4e4;
-    }
-
-    .mb-menu-top-above {
-        padding: 8px;
-        padding-bottom: 0;
-    }
-
-    .mb-menu-content {
-        background-color: #fff;
-        padding: 8px;
-        margin: 0;
-    }
-
-    .mb-menu-content > li {
-        display: flex;
-        flex-direction: column;
-        padding: 9px 10px;
-        padding-bottom: 0;
-        border-bottom: 1px solid #eee;
-    }
-
-    .mb-menu-level-root {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .mb-menu-content  li  a {
-        font-size: 14px;
-        color: #333;
-        font-weight: bold;
-        padding-bottom: 8px;
-    }
-
-    .mb-menu-top-above {
-        display: flex;
-        justify-content: space-between;
-    }
-    .mb-menu-top-above .mb-daily-logo {
-        width: 137px;
-        height: 33px;
-    }
-
-    .mb-menu-top-above .mb-menu-toggle {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        width: 46px;
-        height: 40px;
-        padding: 4px 8px;
-    }
-
-    .mb-menu-top .mb-menu-toggle > i {
-        font-size: 30px;
-        color: #888;
-    }
-
-    .mb-menu-top .phone {
-        font-size: 14px;
-        font-weight: bold;
-        font-family: var(--second-font);
-        color: #243d8e;
-        text-align: center;
-        text-shadow: 0px 1px #243d8e;
-    }
-
-    .mb-menu-multi-level .subnav {
-        margin-left: -8px;
-        margin-right: -8px;       
-    }
-
-    .mb-menu-multi-level .subnav li:first-child {
-        border-top: 1px solid #ddd;
-    }
-
-    .mb-menu-multi-level .subnav li:last-child {
-        border-bottom: none;
-    }
-
-    .mb-menu-multi-level .subnav li {
-        border-bottom: 1px solid #ddd;
-        padding: 8px 25px;
-    }
-
-    .mb-menu-multi-level .subnav a {
-        font-weight: 400;
-        
-    }
-
-    #top-menu .carousel-indicators {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 0 15px;
-        justify-content: space-around;
-    }
-
-    .top-menu {
-        left: 0;
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .top-menu-fixed {
-        top: 0;
-        left: 0;
-        width: 100%;
-        max-height: 176px;
-        padding: 0 15px;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
-    }
-
-    .navbar-top .nav-top {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .carousel-item .slide-1 {
-        padding-top: 32px;
-        text-align: center;
-    }
-
-    .btn-carousel {
-        margin: 0 12px !important;
-    }
-
-    .btn-carousel > span {
-        font-size: 8px;
-    }
-
-    #header,
-    .top-menu .top-menu_logo,
-    .descript-text-1,
-    .descript-text-2,
-    .descript-text-box,
-    .safe-info-box,
-    #exterior .exterior-bg,
-    #safe .safe-bg,
-    .operation-bg,
-    .convenient-bg,
-    .menu-bottom-left,
-    .menu-bottom-right {
-        display: none;
-    }
-
-    .navbar-top {
-        margin-left: 0;
-        margin-right: 0;
-        border-top: 1px solid #000;
-    }
-
-    .navbar-top .nav-top li {
-        font-size: 10px;
-    }
-
-    .hightlights-product > div {
-        padding: 16px 32px;
-    }
-
-    .descript-text-1,
-    .descript-text-2,
-    .descript-text-box,
-    .safe-info-box {
-        display: none;
-    }
-
-    #exterior .exterior-bg {
-        display: none;
-    }
-
-    .air-bag {
-        background-size: 122% 76%;
-        margin-bottom: 0;
-    }
-
-    .hac {
-        max-width: 375px;
-        background-size: 100% 100%;
-        min-height: 154px;
-        padding: 0;
-    }
-
-    .hac-text {
-        display: block;
-    }
-
-    .contact {
-        flex-direction: column;
-        padding: 16px;
-    }
-
-    .contact > div {
-        margin-right: 0;
-    }
-
-    .contact > input {
-        margin-top: 12px;
-        margin-bottom: 12px;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    .contact > button {
-        width: 100%;
-    }
-
-    .content {
-        padding-bottom: 32px;
-    }
-
-    .content-item {
-        margin-top: 16px;
-    }
-
-    .content-item-post .post-img {
-        width: 25% !important;
-    }
-
-    .content-item-post .post-link {
-        width: 75% !important;
-    }
-
-    .contact-info {
-        margin-bottom: 16px;
-    }
-
-    .copy-right {
-        padding: 16px 0;
-    }
-
-    .product-function-descript {
-        display: none !important;
-    }
-
-    .slide-2 {
-        padding-right: 80px;
-    }
-
+.facebook-page > iframe {
+    width: 100% !important;
+    height: 192px;
 }
