@@ -7,24 +7,33 @@
 
 @font-face {
     font-family: ModernHEcoLight;
-    src: url(./ModernH-EcoLight.v1.0.css);
-}
-
-@font-face {
-    font-family: ModernHEcoBold;
-    src: url(./ModernH-Bold.v1.0.css);
-}
-
-@font-face {
-    font-family: ModernHLight;
-    src: url(../font/modernh-light-webfont.ttf);
+    src: url('../font/ChakraPetch-Regular.ttf');
 }
 
 @font-face {
     font-family: ModernHBold;
-    src: url(../font/modernh-bold-webfont.ttf);
+    src: url('../font/ChakraPetch-Medium.ttf');
 }
 
+@font-face {
+    font-family: ChakraPetchRegular;
+    src: url('../font/ChakraPetch-Regular.ttf');
+}
+
+@font-face {
+    font-family: ChakraPetchMedium;
+    src: url('../font/ChakraPetch-Medium.ttf');
+}
+
+@font-face {
+    font-family: ModernHLight;
+    src: url('../font/modernh-light-webfont.ttf');
+}
+
+@font-face {
+    font-family: ChakraPetchMedium;
+    src: url('../font/modernh-bold-webfont.ttf');
+}
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -190,13 +199,13 @@ img {
     color: #222;
     margin: 50px 0 32px 0;
     font-weight: bold;
-    font-family: var(--third-font);
+    font-family: var(--main-font);
 }
 
 .detail-text {
     color: #666;
     font-size: 16px;
-    font-family: var(--third-font);
+    font-family: var(--main-font);
     font-weight: bold;
 }
 
@@ -443,7 +452,7 @@ img {
 .top-menu-fixed a {
     font-size: 14px;
     font-weight: bold;
-    font-family: var(--third-font);
+    font-family: var(--main-font);
 }
 
 .top-menu_logo {
@@ -505,11 +514,17 @@ img {
 
 .slide-info {
     color: #333;
+    font-family: var(--main-font);
+    font-weight: bold;
 }
 
 .slide-info .slide-header-text {
     font-size: 28px;
-    /* font-family: var(--main-font); */
+    font-family: var(--main-font);
+}
+
+.slide-info .slide-text-descript {
+    font-size: 15px;
 }
 
 .slide-info > button {
@@ -518,6 +533,7 @@ img {
     color: white;
     border: none;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .slide-2 {

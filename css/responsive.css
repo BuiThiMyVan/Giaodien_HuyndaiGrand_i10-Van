@@ -12,6 +12,16 @@
     }
 }
 
+@media (max-width: 768px) {
+    .top-menu {
+        width: 100%;
+    }
+    
+    .top-menu-fixed {
+        width: 100%;
+    }
+}
+
 
 @media (min-width: 740px) and (max-width: 1024px) {
     #header {
@@ -136,14 +146,6 @@
         margin-right: 0 !important;
         padding: 0 15px;
         justify-content: space-around;
-    }
-
-    .top-menu {
-        width: 100%;
-    }
-    
-    .top-menu-fixed {
-        width: 100%;
     }
 
     .navbar-top .nav-top {
